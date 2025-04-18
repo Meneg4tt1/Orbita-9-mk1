@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>ORBITA-9 - Eventos Compatíveis</title>
+    <style>
+        body {
+            background-color: black;
+            color: lime;
+            font-family: monospace;
+            padding: 20px;
+        }
+        button {
+            background-color: #003300;
+            color: lime;
+            border: 1px solid lime;
+            padding: 10px;
+            margin: 5px 0;
+            cursor: pointer;
+            width: 100%;
+        }
+        .nivel {
+            margin-bottom: 30px;
+        }
+    </style>
+
+    <audio id="clickSound" preload="auto">
+        <source src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" type="audio/ogg">
+        <source src="https://actions.google.com/sounds/v1/alarms/beep_short.mp3" type="audio/mpeg">
+    </audio>
+    </head>
+    
+<body>
+    <h1>ORBITA-9 - Gerador de Eventos por Nível</h1>
+    <p>Toque no botão correspondente a um nível para gerar um evento aleatório.</p>
+    <script>
+var eventos10 = ["Uma mensagem corrompida aparece com o nome de um dos jogadores.", "AIDEN-3 trava e repete comandos desconexos.", "Luzes se apagam e uma sombra cruza os painéis.", "Terminal exige uma senha que ninguém lembra ter criado.", "Um alarme silencioso ativa torretas por 1 rodada."];
+var eventos9 = ["Hologramas de reuniões passadas se ativam e citam o nome dos jogadores.", "Um velho oficial aparece morto sobre a mesa.", "Microfones captam vozes que não estão presentes.", "Uma gravação mostra um jogador cometendo um crime — nunca ocorrido.", "Mesa explode em faíscas ao toque de qualquer objeto metálico."];
+var eventos8 = ["IA de boas-vindas chama todos de 'traidores'.", "Um ciborgue ferido implora ajuda e explode segundos depois.", "Estátuas decorativas mexem os olhos.", "Espelhos quebrados mostram reflexos diferentes.", "TVs se ligam sozinhas com mensagens codificadas."];
+var eventos7 = ["Alarme de evacuação ativa por 10 segundos.", "Um preso corre e desaparece no ar.", "O chão emite batidas como se algo debaixo estivesse tentando sair.", "A comida replicada é entregue — quente e perfeitamente feita.", "Um grupo de famintos ataca um dos jogadores com pedaços de bandeja."];
+var eventos6 = ["Mina improvisada explode ao lado de um jogador (teste de agilidade).", "Drones patrulheiros confundem um dos jogadores com ameaça.", "Sistema de gravidade falha por 1 rodada.", "Explosão no teto revela um compartimento escondido.", "Gravação de um guarda torturando presos ecoa no andar."];
+var eventos5 = ["Uma rebelião começa entre presos aliados.", "Jogadores escutam um grito vindo da cela ao lado — ela está vazia.", "Líder de uma mini facção local exige pedágio para passar.", "Alguém passa informações confidenciais — mas elas são falsas.", "Drones desativados piscam brevemente e apagam de novo."];
+var eventos4 = ["Explosivos improvisados são plantados por desertores.", "Vozes tentam convencer um jogador a mudar de lado.", "Um ex-oficial se ajoelha aos pés de um jogador pedindo perdão.", "Uma emboscada armada — com apenas bonecos falsos.", "Sistema de portas tranca tudo por 1 minuto."];
+var eventos3 = ["Jogador recebe visões de sua morte.", "Ataques psíquicos causam alucinação coletiva.", "Telepata moribundo transfere uma memória alienígena.", "Jogador escuta seus próprios pensamentos falarem alto.", "Porta se fecha atrás e não reconhece biometria de ninguém."];
+var eventos2 = ["Mutante surge do teto e cospe ácido.", "Gases tóxicos vazam de uma cela quebrada.", "Híbrido pede ajuda e tenta implantar um ovo no jogador.", "Uma criatura camuflada está na sala há minutos.", "Bioalarme de contaminação ativa travas automáticas."];
+var eventos1 = ["Entidade menor tenta se comunicar por um dos corpos.", "O chão se torna gelatinoso — viva.", "Preso deformado se sacrifica para proteger os jogadores.", "Criatura absorve parte da parede e cresce.", "Um jogador ouve sua própria voz falando com ele."];
+var eventos0 = ["A gravidade se inverte por 3 rodadas.", "Tempo desacelera — um turno leva 5 minutos subjetivos.", "Todos veem um jogador como inimigo.", "Entidade tenta se comunicar com um símbolo na pele.", "Realidade distorce: rolagens entre 10-15 são sempre 1 ou 20."];
+
+function gerarEvento(id, eventos) {
+    var e = eventos[Math.floor(Math.random() * eventos.length)];
+    document.getElementById(id).innerText = e;
+    document.getElementById('clickSound').play();
+}
+</script>
+
+<div class="nivel">
+    <h3>Nível 10 - Sala de Controle</h3>
+    <button onclick="gerarEvento('evento10', eventos10)">Rolar Evento</button>
+    <pre id="evento10">...</pre>
+</div>
+
+<div class="nivel">
+    <h3>Nível 9 - Sala de Reuniões</h3>
+    <button onclick="gerarEvento('evento9', eventos9)">Rolar Evento</button>
+    <pre id="evento9">...</pre>
+</div>
+
+<div class="nivel">
+    <h3>Nível 8 - Área VIP</h3>
+    <button onclick="gerarEvento('evento8', eventos8)">Rolar Evento</button>
+    <pre id="evento8">...</pre>
+</div>
+
+<div class="nivel">
+    <h3>Nível 7 - Refeitório dos Presos</h3>
+    <button onclick="gerarEvento('evento7', eventos7)">Rolar Evento</button>
+    <pre id="evento7">...</pre>
+</div>
+
+<div class="nivel">
+    <h3>Nível 6 - Zona de Transição</h3>
+    <button onclick="gerarEvento('evento6', eventos6)">Rolar Evento</button>
+    <pre id="evento6">...</pre>
+</div>
+
+<div class="nivel">
+    <h3>Nível 5 - Prisioneiros Comuns</h3>
+    <button onclick="gerarEvento('evento5', eventos5)">Rolar Evento</button>
+    <pre id="evento5">...</pre>
+</div>
+
+<div class="nivel">
+    <h3>Nível 4 - Rebeldes e Desertores</h3>
+    <button onclick="gerarEvento('evento4', eventos4)">Rolar Evento</button>
+    <pre id="evento4">...</pre>
+</div>
+
+<div class="nivel">
+    <h3>Nível 3 - Psíquicos Instáveis</h3>
+    <button onclick="gerarEvento('evento3', eventos3)">Rolar Evento</button>
+    <pre id="evento3">...</pre>
+</div>
+
+<div class="nivel">
+    <h3>Nível 2 - Assassinos e Híbridos</h3>
+    <button onclick="gerarEvento('evento2', eventos2)">Rolar Evento</button>
+    <pre id="evento2">...</pre>
+</div>
+
+<div class="nivel">
+    <h3>Nível 1 - Criaturas Deformadas</h3>
+    <button onclick="gerarEvento('evento1', eventos1)">Rolar Evento</button>
+    <pre id="evento1">...</pre>
+</div>
+
+<div class="nivel">
+    <h3>Nível 0 - Núcleo do Vazio</h3>
+    <button onclick="gerarEvento('evento0', eventos0)">Rolar Evento</button>
+    <pre id="evento0">...</pre>
+</div>
+</body></html>
